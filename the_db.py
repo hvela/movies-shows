@@ -26,7 +26,7 @@ class FlixStorage:
     # Insert data into the movies table
     c.execute('INSERT INTO movies VALUES (?)', (Flix.add_movie(None),))
 
-    #print all the movies -------
+    # print all the movies -------
     print("The movies in the pool are: \n")
     c.execute("SELECT * FROM movies")
     print(c.fetchall())
@@ -47,9 +47,7 @@ class FlixStorage:
     pick = c.fetchone()[0]
     print('The movie to watch is: ',pick)
 
-
-
-    #print all the shows------
+    # print all the shows------
     print("\n\nThe shows in the pool are: \n")
     c.execute("SELECT * FROM shows")
     print(c.fetchall())
