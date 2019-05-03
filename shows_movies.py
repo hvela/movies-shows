@@ -1,7 +1,6 @@
 import random
 import json
 
-
 class Flix:
     #constructor method that has variables
     def __init__(self, showname=None, moviename=None):
@@ -9,11 +8,8 @@ class Flix:
         self.moviename = moviename
 
     def start_program(self):
-        print('{}\nThis program will allow you to enter shows and movies and store'
-              ' them in a database.\nThen it will print out 1 show and movie randomly'
-              ' that you have stored.\n'.format('d*_*b'
-                                             '\n  |'
-                                              '\n - -\n\n'))
+        print('\nThis program will allow you to enter shows and movies and store '
+              'them in a database.\nThen it will print out 1 show and 1 movie randomly\n')
 
     def add_show(self):
         try:
@@ -30,9 +26,10 @@ class Flix:
             moviename = input('What is the name of the movie: ')
             if not moviename:
                 raise ValueError
+            return moviename
         except ValueError:
             print("You did not enter a movie name")
-        return moviename
+
 
 
 
