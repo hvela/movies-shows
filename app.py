@@ -8,20 +8,22 @@ class Menu(FlixStorage):
         FlixStorage.__init__(self)
 
     def start_program():
-        choice = int(input("Enter one of the following to continue\n\n"
-                       "1 - to add a movie\n"
-                       "2 - to add a show\n"
-                       "3 - to quit\n\n"
-                       "input: "))
+        while True:
+            choice = int(input("Enter one of the following to continue\n\n"
+                           "1 - to add a movie\n"
+                           "2 - to add a show\n"
+                           "3 - to quit\n\n"
+                           "input: "))
 
-        if choice is 1:
-              FlixStorage.add_movies(self=None)
-        if choice is 2:
-              FlixStorage.add_shows(self=None)
-        else:
-              print("hello world")
+            if choice is 1:
+                  FlixStorage.add_movies(self=None)
+            if choice is 2:
+                  FlixStorage.add_shows(self=None)
+            if choice is 3:
+                print("hello world")
+                break
     start_program()
-    # if __name__=="main":
     #     start_program(self)
+    # if __name__=="main":
 
 #   issue of getting program to recall it self from other class
