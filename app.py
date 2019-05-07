@@ -1,6 +1,7 @@
 # this class is a menu where the app should be started
 from data_storage import FlixStorage
 from shows_movies import Flix
+from getData import api
 
 class Menu(FlixStorage):
     def __init__(self, choice=None):
@@ -17,15 +18,16 @@ class Menu(FlixStorage):
                            "input: "))
 
             if choice is 1:
-                  FlixStorage.add_movies(self=None)
+                FlixStorage.add_movies(self=None)
             if choice is 2:
-                  FlixStorage.add_shows(self=None)
+                FlixStorage.add_shows(self=None)
             if choice is 3:
-                # add choice for 3
+                # add choice for
+                api.retrieve(self=None)
             if choice is 4:
                 print("thanks for using")
                 break
-                
+
     start_program()
     #     start_program(self)
     # if __name__=="main":

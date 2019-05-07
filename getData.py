@@ -15,24 +15,26 @@ import requests
 
 # pip install requests --index-url https://pypi.org//simple/
 
-movie_name = input('Enter a movie name: ')
-main_api = 'http://www.omdbapi.com/?t='+movie_name+'?&apikey=138e55c9'
+class api:
+    def retrieve(self):
+        movie_name = input('Enter a movie name: ')
+        main_api = 'http://www.omdbapi.com/?t='+movie_name+'?&apikey=138e55c9'
 
-url = main_api + urllib.parse.urlencode({})
+        url = main_api + urllib.parse.urlencode({})
 
-print(url)
+        print(url)
 
-json_data = requests.get(url).json()
+        json_data = requests.get(url).json()
 
-# print(json_data)
+        # print(json_data)
 
-the_title = json_data['Title']
-rating_value = json_data['Ratings'][0]
-released_year = json_data['Year']
-rated = json_data['Rated']
+        the_title = json_data['Title']
+        rating_value = json_data['Ratings'][0]
+        released_year = json_data['Year']
+        rated = json_data['Rated']
 
-# print out the information for the movie to the user
-print('The title of this movie is: '+the_title)
-print('The year this movie came out was: '+released_year)
-print('This movie is rated: '+rated)
-print('The rating of this movie is: ',rating_value)
+        # print out the information for the movie to the user
+        print('The title of this movie is: '+the_title)
+        print('The year this movie came out was: '+released_year)
+        print('This movie is rated: '+rated)
+        print('The rating of this movie is: ',rating_value)
