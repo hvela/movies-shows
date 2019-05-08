@@ -10,26 +10,28 @@ class Menu(FlixStorage):
 
     def start_program():
         while True:
-            choice = int(input("Enter one of the following to continue\n\n"
-                           "1 - to add a movie\n"
-                           "2 - to add a show\n"
-                           "3 - to get information about any movie\n"
-                           "4 - to quit\n\n"
-                           "input: "))
 
-            if choice is 1:
-                FlixStorage.add_movies(self=None)
-            if choice is 2:
-                FlixStorage.add_shows(self=None)
-            if choice is 3:
-                # add choice for
-                api.retrieve(self=None)
-            if choice is 4:
-                print("thanks for using")
-                break
+           choice = input("\nEnter one of the following to continue\n\n"
+                               "1 - to add a movie\n"
+                               "2 - to add a show\n"
+                               "3 - to get information about any movie\n"
+                               "4 - to quit\n\n"
+                               "input: ")
+           try:
+               chosen = int(choice)
+           except ValueError:
+               print("errrorr")
+
+           if chosen is 1:
+               FlixStorage.add_movies(self=None)
+           elif chosen is 2:
+               FlixStorage.add_shows(self=None)
+           elif chosen is 3:
+               api.retrieve(self=None)
+           elif chosen is 4:
+               print("thanks for using")
+               break
+           else:
+               print("You eneter and invalid value")
 
     start_program()
-    #     start_program(self)
-    # if __name__=="main":
-
-#   issue of getting program to recall it self from other class

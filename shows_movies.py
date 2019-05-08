@@ -1,5 +1,4 @@
-import random
-import json
+
 
 class Flix:
     #constructor method that has variables
