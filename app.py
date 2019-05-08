@@ -29,9 +29,9 @@ class Menu(FlixStorage):
            elif chosen is 3:
                api.retrieve(self=None)
            elif chosen is 4:
-               print("thanks for using")
+               print("Thanks for using!")
                break
            else:
-               print("You eneter and invalid value")
+               print("You entered an invalid value, please try again.")
 
     start_program()

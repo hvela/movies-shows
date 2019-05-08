@@ -1,4 +1,6 @@
 # movies-shows
-This application will allow the user to store their shows and movies and then pick one randomly to watch
+This application will allow the user to store their shows and movies
+and then pick one randomly. It will also allow you get any movie information.
 
-Unit tests also need to written
+
+Unit tests also need to be written
