@@ -17,21 +17,21 @@ class Menu(FlixStorage):
                                "3 - to get information about any movie\n"
                                "4 - to quit\n\n"
                                "input: ")
-           try:
-               chosen = int(choice)
-           except ValueError:
-               print("errrorr")
 
-           if chosen is 1:
-               FlixStorage.add_movies(self=None)
-           elif chosen is 2:
-               FlixStorage.add_shows(self=None)
-           elif chosen is 3:
-               api.retrieve(self=None)
-           elif chosen is 4:
-               print("Thanks for using!")
-               break
+           # convert to int if it's an actual number
+           if choice.isdigit():
+               choice = int(choice)
+               if choice is 1:
+                   FlixStorage.add_movies(self=None)
+               elif choice is 2:
+                   FlixStorage.add_shows(self=None)
+               elif choice is 3:
+                   api.retrieve(self=None)
+               elif choice is 4:
+                   print("Thanks for using!")
+                   break
+               else:
+                   print("You entered an invalid value, please try again.")
            else:
-               print("You entered an invalid value, please try again.")
-
+               print('error find')
     start_program()
