@@ -17,7 +17,7 @@ import requests
 
 class api:
     def retrieve(self):
-        movie_name = input('Enter a movie name: ')
+        movie_name = input('Enter a movie or show name: ')
         main_api = 'http://www.omdbapi.com/?t='+movie_name+'?&apikey=138e55c9'
 
         url = main_api + urllib.parse.urlencode({})
@@ -38,7 +38,7 @@ class api:
             rated = json_data['Rated']
 
             # print out the information for the movie to the user
-            print('The title of this movie is: '+the_title)
-            print('The year this movie came out was: '+released_year)
-            print('This movie is rated: '+rated)
-            print('The rating of this movie is: ',rating_value)
+            print('\nThe title is: '+the_title)
+            print('The year it came out was: '+released_year)
+            print('This is rated: '+rated)
+            print('Critics rating info: ',rating_value)

@@ -3,6 +3,7 @@ from data_storage import FlixStorage
 from shows_movies import Flix
 from getData import api
 
+
 class Menu(FlixStorage):
     def __init__(self, choice=None):
         self.choice = choice
@@ -13,7 +14,7 @@ class Menu(FlixStorage):
             choice = input("\nEnter one of the following to continue\n\n"
                            "1 - to add a movie\n"
                            "2 - to add a show\n"
-                           "3 - to get information about any movie\n"
+                           "3 - to get information about any movie or show\n"
                            "4 - to quit\n\n"
                            "input: ")
 
