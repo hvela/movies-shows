@@ -1,4 +1,13 @@
 # movies-shows
-This application will allow the user to store their shows and movies and then pick one randomly to watch
 
-Unit tests should aso be written
+This application will allow the user to store their shows and movies
+and then pick one randomly. It will also allow you get any movie/show information.
+
+####clone the repo
+
+``
+git clone 
+``
+
+Unit tests also need to be written
+
