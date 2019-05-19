@@ -29,7 +29,6 @@ class api:
             print(json_data['Error'])
         else:
             # print(json_data)
-
             the_title = json_data['Title']
             rating_value = json_data['Ratings'][0]
             released_year = json_data['Year']
