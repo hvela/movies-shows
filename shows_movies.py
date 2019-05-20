@@ -25,10 +25,9 @@ class Flix:
             moviename = input('What is the name of the movie: ')
             if not moviename:
                 raise ValueError
-            return moviename
         except ValueError:
             print("You did not enter a movie name")
-
+        return moviename
 
 
 

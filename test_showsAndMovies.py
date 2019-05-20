@@ -21,6 +21,21 @@ class testAddShow(unittest.TestCase):
             assert Flix.add_show(self) == 'the office'
     #         self.assertIsNotNone('builtins.input', 'the office')
 
+class testAddMovie(unittest.TestCase):
+    # basic unit tests using mock.patch...
+    def test_movie_empty(self):
+        with mock.patch('builtins.input', return_value=None):
+            assert Flix.add_movie(self) == None
+
+    def test_movie_not_empty(self):
+        with mock.patch('builtins.input', return_value=''):
+            assert Flix.add_movie(self) == ''
+
+    def test_movie_value(self):
+        with mock.patch('builtins.input', return_value='Avengers'):
+            assert Flix.add_movie(self) == 'Avengers'
+    #         self.assertIsNotNone('builtins.input', 'the office')
+
     # @mock.patch('shows_movies.Flix')
     # def test_show_not(mock_add_show):
     #         value = None
