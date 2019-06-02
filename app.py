@@ -13,7 +13,7 @@ class Menu(FlixStorage):
     def start_program():
         name = input("Enter your name: ")
         while True:
-            choice = input("\nEnter one of the following to continue\n\n"
+            choice = input("\n"+name+" Enter one of the following to continue:\n\n"
                            "1 - to add a movie\n"
                            "2 - to add a show\n"
                            "3 - to get information about any movie or show\n"
