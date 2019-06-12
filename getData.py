@@ -16,7 +16,7 @@ import requests
 class api:
     def retrieve(self):
         movie_name = input('Enter a movie or show name: ')
-        main_api = 'http://www.omdbapi.com/?t='+movie_name+'?&apikey=138e55c9'
+        main_api = 'http://www.omdbapi.com/?t='+movie_name+'?&apikey=api_key'
 
         url = main_api + urllib.parse.urlencode({})
 

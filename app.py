@@ -5,6 +5,7 @@ from getData import api
 import logging
 
 
+
 class Menu(FlixStorage):
     def __init__(self, choice=None):
         self.choice = choice

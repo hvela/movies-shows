@@ -14,6 +14,7 @@ dist
 .installed.cfg
 .mr.developer.cfg
 .hg
+.env
 .bzr
 .svn
 *.pyc
