@@ -1,10 +1,9 @@
 # this class is a menu where the app should be started
+import os
 from data_storage import FlixStorage
 from shows_movies import Flix
 from getData import api
 import logging
-
-
 
 class Menu(FlixStorage):
     def __init__(self, choice=None):
