@@ -1,5 +1,6 @@
 import urllib.request
 import requests
+import os
 
 
 # new_json = json.dumps(data, indent=3, sort_keys=True)
@@ -13,10 +14,18 @@ import requests
 
 # pip install requests --index-url https://pypi.org//simple/
 
+# key = os.environ.get('api_key')
+# print(key)
+# key(help)
+# print(os.environ['api_key'])
+
 class api:
     def retrieve(self):
         movie_name = input('Enter a movie or show name: ')
-        main_api = 'http://www.omdbapi.com/?t='+movie_name+'?&apikey=138e55c9'
+
+        key = os.environ['api_key']
+
+        main_api = 'http://www.omdbapi.com/?t='+movie_name+'?&apikey='+key
 
         url = main_api + urllib.parse.urlencode({})
 
@@ -29,7 +38,6 @@ class api:
             print(json_data['Error'])
         else:
             # print(json_data)
-
             the_title = json_data['Title']
             rating_value = json_data['Ratings'][0]
             released_year = json_data['Year']
