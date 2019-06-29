@@ -1,7 +1,5 @@
-
-
 class Flix:
-    #constructor method that has variables
+    # constructor method that has variables
     def __init__(self, showname=None, moviename=None):
         self.showname = showname
         self.moviename = moviename

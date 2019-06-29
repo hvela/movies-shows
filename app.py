@@ -2,8 +2,9 @@
 import os
 from data_storage import FlixStorage
 from shows_movies import Flix
-from getData import api
+from getData import Api
 import logging
+
 
 class Menu(FlixStorage):
     def __init__(self, choice=None):
@@ -28,7 +29,7 @@ class Menu(FlixStorage):
                 elif choice is 2:
                     FlixStorage.add_shows(self=None)
                 elif choice is 3:
-                    api.retrieve(self=None)
+                    Api.retrieve(self=None)
                 elif choice is 4:
                     print("Thanks for using", name+"!")
                     break
