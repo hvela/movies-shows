@@ -1,10 +1,8 @@
 #this is a file to practice integration testing
 import unittest.mock
-from unittest.mock import patch, Mock
 from shows_movies import Flix
+from Mock import mock
 
-
-import mock
 
 class testAddShow(unittest.TestCase):
     # basic unit tests using mock.patch...
