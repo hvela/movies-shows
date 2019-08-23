@@ -3,6 +3,7 @@ import sqlite3
 from ShowsAndMovies import Flix
 import random
 
+
 class FlixStorage:
     # step 1 connect the database
     conn = sqlite3.connect('databaseFile.db')
