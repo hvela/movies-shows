@@ -30,3 +30,55 @@ class testAddShow(unittest.TestCase):
         with mock.patch('builtins.input', return_value='Avengers'):
             assert Flix.add_movie(self) == 'Avengers'
 
+
+
+
+<html>
+            <body>
+                <p>Enter a movie and show:</p>
+                <form method="post" action="">
+                    Movie name:
+                    <p><input name="moviename" /></p>
+                    Show name:
+                    <p><input name="showname" /></p>
+                    <p><input type="submit" name="clicked" value="add" /></p>
+                    <p><input type="submit" name="clicked" value="show it" /></p>
+                </form>
+            </body>
+        </html>
+    '''
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -7,22 +7,10 @@ from flask import Flask, render_template, url_for, flash, redirect, request
 import sqlite3
 from flask import g
 
-
-
-DATABASE = "C:\\Users\]Harold\\Documents\\Projects\\movies_shows\\databaseFile.db"
-
-
 app = Flask(__name__)
 
 
-def get_db():
-    db = getattr(g, '_database', None)
-    if db is None:
-        db = g._database = sqlite3.connect(DATABASE)
-    return db
-
-
-@app.route("/", methods=["GET", "POST"])
+@app.route("/index.html", methods=["GET", "POST"])
 def home():
     errors = ""
     if request.method == "POST":
@@ -36,15 +24,7 @@ def home():
         # if moviename is not None and showname is not None:
         if request.form['clicked'] == 'add':
             result = add_list(moviename, showname)
-            return '''
-                       <html>
-                           <body>
-                               <p>The result is </p>
-                               <p>the list of movies {result}</p>
-                               <p><a href="/">Click here to try again</a>
-                           </body>
-                       </html>
-                   '''.format(result=result)
+            return render_template('list.html').format(result=result)
 
         if request.form['clicked'] == 'show it':
             theList = get_movies()
@@ -58,21 +38,7 @@ def home():
                        </html>
                   '''.format(theList=theList)
 
-    return '''
-        <html>
-            <body>
-                <p>Enter a movie and show:</p>
-                <form method="post" action="">
-                    Movie name:
-                    <p><input name="moviename" /></p>
-                    Show name:
-                    <p><input name="showname" /></p>
-                    <p><input type="submit" name="clicked" value="add" /></p>
-                    <p><input type="submit" name="clicked" value="show it" /></p>
-                </form>
-            </body>
-        </html>
-    '''
+    return render_template('home.html')
 
 
 def add_list(moviename, showname):
