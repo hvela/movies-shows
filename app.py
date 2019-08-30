@@ -44,6 +44,7 @@ def home():
     return render_template('home.html')
 # test comment for commit 1
 # test comment for commit 2
+# test comment for commit 3
 
 def add_list(moviename, showname):
     FlixStorage.add_movies(moviename)
