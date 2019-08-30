@@ -42,7 +42,7 @@ def home():
             return render_template('list.html').format(all_movies=all_movies, all_shows=all_shows)
 
     return render_template('home.html')
-
+# test comment for commit 1
 
 def add_list(moviename, showname):
     FlixStorage.add_movies(moviename)
