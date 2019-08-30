@@ -4,8 +4,7 @@ from shows_movies import Flix
 from getData import Api
 import logging
 from flask import Flask, render_template, url_for, flash, redirect, request
-import sqlite3
-from flask import g
+
 
 app = Flask(__name__)
 
@@ -22,21 +21,25 @@ def home():
 
         # validation
         # if moviename is not None and showname is not None:
+
+        # if the user adds movies render the movies added
         if request.form['clicked'] == 'add':
             result = add_list(moviename, showname)
-            return render_template('list.html').format(result=result)
+            return render_template('added.html').format(result=result)
 
+        # if the user wants to see the movies in the pool show them
         if request.form['clicked'] == 'show it':
-            theList = get_movies()
-            return '''
-                       <html>
-                        <body>
-                            <p>The result is </p>
-                            <p>the list of movies {theList}</p>
-                            <p><a href="/">Click here to try again</a>
-                        </body>
-                       </html>
-                  '''.format(theList=theList)
+            all_movies = get_movies()
+            all_shows = get_shows()
+
+                       # <html>
+                       #  <body>
+                       #      <p>The result is </p>
+                       #      <p>the list of movies {theList}</p>
+                       #      <p><a href="index.html">Click here to try again</a>
+                       #  </body>
+                       # </html>
+            return render_template('list.html').format(all_movies=all_movies, all_shows=all_shows)
 
     return render_template('home.html')
 
@@ -48,7 +51,11 @@ def add_list(moviename, showname):
 
 
 def get_movies():
-    return FlixStorage.get_movies()
+    return FlixStorage.fetch_movies()
+
+
+def get_shows():
+    return FlixStorage.fetch_shows()
 
 
 # class Menu(FlixStorage):

@@ -23,7 +23,7 @@ class FlixStorage:
         # c.execute('INSERT INTO shows VALUES (?)', (Flix.add_show(None),))
 
         # Insert data into the movies table
-        c.execute('INSERT INTO movies(movie_name) VALUES(?)', (movie,))
+        c.execute('INSERT INTO myMovies(movie_name) VALUES(?)', (movie,))
 
         # cur.execute("insert into test(d, ts) values (?, ?)", (today, now))
 
@@ -32,20 +32,22 @@ class FlixStorage:
         # c.execute(data)
         # get and print all the movies -------
         # print("The movies in the pool are: ")
+        conn.commit()
+        conn.close()
 
-    def get_movies():
+    @staticmethod
+    def fetch_movies():
         # step 1 connect the database
         conn = sqlite3.connect('databaseFile.db')
 
         # step 2 create the cursor
         c = conn.cursor()
 
-        c = c.execute("SELECT * FROM movies")
+        c = c.execute("SELECT * FROM myMovies")
 
         # print all movies
         a = c.fetchall()
 
-        return a
         #
         # get all the movies
         # d = c.execute("SELECT * FROM movies")
@@ -81,9 +83,12 @@ class FlixStorage:
         conn.commit()
 
         conn.close()
+        print(a)
+        return a
 
     #   method here to add shows
-    def add_shows(self):
+    @staticmethod
+    def add_shows(showname):
         # add shows if user wants to add shows --------------------
         print("____________________________________________________________\n")
         # step 1 connect the database
@@ -95,7 +100,7 @@ class FlixStorage:
         c.execute("""CREATE TABLE IF NOT EXISTS shows (showname TEXT)""")
 
         # Insert data into the movies table
-        c.execute('INSERT INTO shows VALUES (?)', (Flix.add_show(None),))
+        c.execute('INSERT INTO shows VALUES (?)', (showname,))
 
         # get and print all the shows -------
         print("The shows in the pool are: ")
@@ -136,3 +141,17 @@ class FlixStorage:
 
         conn.close()
 
+    @staticmethod
+    def fetch_shows():
+        # step 1 connect the database
+        conn = sqlite3.connect('databaseFile.db')
+
+        # step 2 create the cursor
+        c = conn.cursor()
+
+        c = c.execute("SELECT * FROM shows")
+
+        fetched_shows = c.fetchall()
+        conn.commit()
+        conn.close()
+        return fetched_shows
