@@ -9,6 +9,11 @@ from flask import Flask, render_template, url_for, flash, redirect, request
 app = Flask(__name__)
 
 
+@app.route("/")
+def hello():
+    return "hello there!"
+
+
 @app.route("/index.html", methods=["GET", "POST"])
 def home():
     errors = ""
@@ -45,6 +50,7 @@ def home():
 # test comment for commit 1
 # test comment for commit 2
 # test comment for commit 3
+
 
 def add_list(moviename, showname):
     FlixStorage.add_movies(moviename)
@@ -96,4 +102,4 @@ def get_shows():
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host="0.0.0.0", port=80, debug=True)

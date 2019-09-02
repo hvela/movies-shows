@@ -6,6 +6,7 @@ import random
 class FlixStorage:
 
     # method here for adding movies to the database
+    @staticmethod
     def add_movies(movie):
         # step 1 connect the database
         conn = sqlite3.connect('databaseFile.db')
@@ -90,7 +91,7 @@ class FlixStorage:
     @staticmethod
     def add_shows(showname):
         # add shows if user wants to add shows --------------------
-        print("____________________________________________________________\n")
+        # print("____________________________________________________________\n")
         # step 1 connect the database
         conn = sqlite3.connect('databaseFile.db')
 
@@ -103,39 +104,39 @@ class FlixStorage:
         c.execute('INSERT INTO shows VALUES (?)', (showname,))
 
         # get and print all the shows -------
-        print("The shows in the pool are: ")
-
-        c.execute("SELECT * FROM shows")
-
-        # get all the movies
-        d = c.execute("SELECT * FROM shows")
-
-        print(d.fetchall())
-
-        # gets the maximum number of rows/movies
-        max = c.execute("SELECT max(rowid) FROM shows")
-
-        # gets the amount of movies - by getting the last value from c
-        s = c.fetchone()[0]
-        print("There are a total of", s, "shows in the database")
-
-        # issue of randomizing from 0 shows need to do it only when more than 1 shows present
-        if s > 1:
-            print('\n--------radomizing show--------')
-
-            # generate random value
-            j = random.randrange(1, s)
-
-            # print("the random value to get is: ",j)
-
-            # pick the random movie using variable from list
-            c.execute("SELECT*FROM shows WHERE rowid={}".format(j))
-
-            # set pick to the last item fetched
-            show_pick = c.fetchone()
-
-            # print the random pick
-            print('The show to watch is: ', show_pick)
+        # print("The shows in the pool are: ")
+        #
+        # c.execute("SELECT * FROM shows")
+        #
+        # # get all the movies
+        # d = c.execute("SELECT * FROM shows")
+        #
+        # print(d.fetchall())
+        #
+        # # gets the maximum number of rows/movies
+        # max = c.execute("SELECT max(rowid) FROM shows")
+        #
+        # # gets the amount of movies - by getting the last value from c
+        # s = c.fetchone()[0]
+        # print("There are a total of", s, "shows in the database")
+        #
+        # # issue of randomizing from 0 shows need to do it only when more than 1 shows present
+        # if s > 1:
+        #     print('\n--------radomizing show--------')
+        #
+        #     # generate random value
+        #     j = random.randrange(1, s)
+        #
+        #     # print("the random value to get is: ",j)
+        #
+        #     # pick the random movie using variable from list
+        #     c.execute("SELECT*FROM shows WHERE rowid={}".format(j))
+        #
+        #     # set pick to the last item fetched
+        #     show_pick = c.fetchone()
+        #
+        #     # print the random pick
+        #     print('The show to watch is: ', show_pick)
 
         conn.commit()
 

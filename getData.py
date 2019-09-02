@@ -1,4 +1,4 @@
-import urllib.request
+# import urllib.request
 import requests
 import os
 from pprint import pprint
