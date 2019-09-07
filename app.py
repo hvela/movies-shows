@@ -5,6 +5,7 @@ from getData import Api
 import logging
 from flask import Flask, render_template, url_for, flash, redirect, request
 
+DATABASE = '/home/techturtl3/mysite/databaseFile.db'
 
 app = Flask(__name__)
 
@@ -33,7 +34,7 @@ def home():
             return render_template('added.html').format(result=result)
 
         # if the user wants to see the movies in the pool show them
-        if request.form['clicked'] == 'show it':
+        if request.form['clicked'] == 'show library':
             all_movies = get_movies()
             all_shows = get_shows()
 

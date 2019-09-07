@@ -49,7 +49,29 @@ class FlixStorage:
         # print all movies
         a = c.fetchall()
 
+        result = []
+        # print(a)
+        for movies in a:
+            for items in movies:
+                result.append(items)
+
+        conditioned = ''
+        for items in result:
+            conditioned += items+' , '
+
+
+        print(conditioned)
+
+        # print(result)
+        counter = 0
+        # alist = list(a)
         #
+        # print(alist)
+
+        # mu = (5,8,9,4)
+        # theList = list(mu)
+        # print(theList)
+
         # get all the movies
         # d = c.execute("SELECT * FROM movies")
         #
@@ -84,8 +106,8 @@ class FlixStorage:
         conn.commit()
 
         conn.close()
-        print(a)
-        return a
+        # print(a)
+        return conditioned
 
     #   method here to add shows
     @staticmethod
@@ -153,6 +175,17 @@ class FlixStorage:
         c = c.execute("SELECT * FROM shows")
 
         fetched_shows = c.fetchall()
+
+        result = []
+        # print(a)
+        for shows in fetched_shows:
+            for items in shows:
+                result.append(items)
+
+        conditioned = ''
+        for items in result:
+            conditioned += items + ' , '
+
         conn.commit()
         conn.close()
-        return fetched_shows
+        return conditioned
