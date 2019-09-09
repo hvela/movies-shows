@@ -189,3 +189,22 @@ class FlixStorage:
         conn.commit()
         conn.close()
         return conditioned
+
+    @staticmethod
+    def clear_movies():
+        conn = sqlite3.connect('databaseFile.db')
+        c = conn.cursor()
+
+        c = c.execute("DROP table myMovies")
+
+        conn.close()
+        return 2
+
+    @staticmethod
+    def clear_shows():
+        conn = sqlite3.connect('databaseFile.db')
+        c = conn.cursor()
+
+        c = c.execute("DROP table shows")
+
+        conn.close()

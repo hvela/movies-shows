@@ -4,8 +4,9 @@ from shows_movies import Flix
 from getData import Api
 import logging
 from flask import Flask, render_template, url_for, flash, redirect, request
+import sqlite3
 
-DATABASE = '/home/techturtl3/mysite/databaseFile.db'
+DATABASE = 'databaseFile.db'
 
 app = Flask(__name__)
 
@@ -31,26 +32,33 @@ def home():
         # if the user adds movies render the movies added
         if request.form['clicked'] == 'add':
             result = add_list(moviename, showname)
+
             return render_template('added.html').format(result=result)
 
         # if the user wants to see the movies in the pool show them
         if request.form['clicked'] == 'show library':
-            all_movies = get_movies()
-            all_shows = get_shows()
-
-                       # <html>
-                       #  <body>
-                       #      <p>The result is </p>
-                       #      <p>the list of movies {theList}</p>
-                       #      <p><a href="index.html">Click here to try again</a>
-                       #  </body>
-                       # </html>
-            return render_template('list.html').format(all_movies=all_movies, all_shows=all_shows)
+            try:
+                all_movies = get_movies()
+                all_shows = get_shows()
+                return render_template('list.html').format(all_movies=all_movies, all_shows=all_shows)
+            except:
+                return render_template('exception.html')
 
     return render_template('home.html')
-# test comment for commit 1
-# test comment for commit 2
-# test comment for commit 3
+
+
+@app.route("/home.html", methods=["GET", "POST"])
+def library():
+    if request.method == "POST":
+        if request.form['eshows'] == 'Empty shows':
+            eshows = clear_shws()
+            return render_template('home.html')
+
+        if request.form['emovies'] == 'Empty movies':
+            emovies = clear_mvs()
+            return render_template('home.html')
+
+
 
 
 def add_list(moviename, showname):
@@ -66,6 +74,13 @@ def get_movies():
 def get_shows():
     return FlixStorage.fetch_shows()
 
+
+def clear_mvs():
+    return FlixStorage.clear_movies()
+
+
+def clear_shws():
+    return FlixStorage.clear_shows()
 
 # class Menu(FlixStorage):
 #     def __init__(self, choice=None):
