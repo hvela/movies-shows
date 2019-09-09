@@ -12,9 +12,9 @@ and then pick one randomly. It will also allow you get any movie/show informatio
 git clone 
 ``
 
-##_To Do List_
-- [] Add remove data buttons
-- [] Add good format to display data
-- [] Add request movie data using api
+## _To Do List_
+- [ ] Add remove data buttons
+- [ ] Add good format to display data
+- [ ] Add request movie data using api
 
 
