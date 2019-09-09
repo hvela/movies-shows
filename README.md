@@ -1,4 +1,4 @@
-#_Synopsis_
+# _Synopsis_
 
 ---
 This application will allow the user to store their shows and movies
