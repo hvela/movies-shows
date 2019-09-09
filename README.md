@@ -15,6 +15,7 @@ git clone
 ## _To Do List_
 - [ ] Add remove data buttons
 - [ ] Add good format to display data
+- [ ] Add random picker for both movies and shows
 - [ ] Add request movie data using api
 
 
