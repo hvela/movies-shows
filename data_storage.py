@@ -3,6 +3,7 @@ import sqlite3
 from shows_movies import Flix
 import random
 
+
 class FlixStorage:
 
     # method here for adding movies to the database

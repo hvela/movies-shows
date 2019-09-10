@@ -7,6 +7,7 @@ from flask import Flask, render_template, url_for, flash, redirect, request
 import sqlite3
 
 DATABASE = 'databaseFile.db'
+# /home/techturtl3/databaseFile.db
 
 app = Flask(__name__)
 
@@ -14,6 +15,11 @@ app = Flask(__name__)
 @app.route("/")
 def hello():
     return "hello there!"
+
+
+@app.route("/requests", methods=["GET", "POST"])
+def request_data():
+    return render_template('requests.html')
 
 
 @app.route("/index.html", methods=["GET", "POST"])
@@ -50,11 +56,11 @@ def home():
 @app.route("/home.html", methods=["GET", "POST"])
 def library():
     if request.method == "POST":
-        if request.form['eshows'] == 'Empty shows':
+        if request.form['clicked'] == 'Empty shows':
             eshows = clear_shws()
             return render_template('home.html')
 
-        if request.form['emovies'] == 'Empty movies':
+        if request.form['clicked'] == 'Empty movies':
             emovies = clear_mvs()
             return render_template('home.html')
 
