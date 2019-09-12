@@ -65,6 +65,12 @@ def library():
             return render_template('home.html')
 
 
+@app.route("/requests.html")
+def request_info():
+    if request.method == "POST":
+        if request.form['clicked'] == 'search':
+            data = get_data()
+            return render_template('requests.html').format(data=data)
 
 
 def add_list(moviename, showname):
@@ -88,39 +94,9 @@ def clear_mvs():
 def clear_shws():
     return FlixStorage.clear_shows()
 
-# class Menu(FlixStorage):
-#     def __init__(self, choice=None):
-#         self.choice = choice
-#         FlixStorage.__init__(self)
-#
-#     def start_program(self=None):
-#         name = input("Enter your name: ")
-#         while True:
-#             choice = input("\n"+name+", enter one of the following to continue:\n\n"
-#                            "1 - to add a movie\n"
-#                            "2 - to add a show\n"
-#                            "3 - to get information about any movie or show\n"
-#                            "4 - to quit\n\n"
-#                            "input: ")
-#
-#         # convert to int if it's an actual number
-#             if choice.isdigit():
-#                 choice = int(choice)
-#                 if choice is 1:
-#                     FlixStorage.add_movies(self=None)
-#                 elif choice is 2:
-#                     FlixStorage.add_shows(self=None)
-#                 elif choice is 3:
-#                     Api.retrieve(self=None)
-#                 elif choice is 4:
-#                     print("Thanks for using", name+"!")
-#                     break
-#                 else:
-#                     print("You entered an invalid value, please try again.")
-#             else:
-#                 print('Something went wrong, try again!')
-    # start_program()
-    # logging.debug('App currently running!')
+
+def get_data():
+    return Api.retrieve()
 
 
 if __name__ == '__main__':
