@@ -65,12 +65,14 @@ def library():
             return render_template('home.html')
 
 
-@app.route("/requests.html")
+@app.route("/requests.html",  methods=["GET", "POST"])
 def request_info():
     if request.method == "POST":
+        flix = request.form["motion_picture"]
+        motion_picture = get_data(flix)
         if request.form['clicked'] == 'search':
-            data = get_data()
-            return render_template('requests.html').format(data=data)
+            return render_template('fetch.html').format(motion_picture=motion_picture)
+    return render_template('requests.html')
 
 
 def add_list(moviename, showname):
@@ -95,8 +97,8 @@ def clear_shws():
     return FlixStorage.clear_shows()
 
 
-def get_data():
-    return Api.retrieve()
+def get_data(flix):
+    return Api.retrieve(flix)
 
 
 if __name__ == '__main__':

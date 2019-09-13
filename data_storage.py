@@ -10,7 +10,7 @@ class FlixStorage:
     @staticmethod
     def add_movies(movie):
         # step 1 connect the database
-        conn = sqlite3.connect('databaseFile.db')
+        conn = sqlite3.connect('/home/techturtl3/databaseFile.db')
 
         # step 2 create the cursor
         c = conn.cursor()
@@ -40,7 +40,7 @@ class FlixStorage:
     @staticmethod
     def fetch_movies():
         # step 1 connect the database
-        conn = sqlite3.connect('databaseFile.db')
+        conn = sqlite3.connect('/home/techturtl3/databaseFile.db')
 
         # step 2 create the cursor
         c = conn.cursor()
@@ -116,7 +116,7 @@ class FlixStorage:
         # add shows if user wants to add shows --------------------
         # print("____________________________________________________________\n")
         # step 1 connect the database
-        conn = sqlite3.connect('databaseFile.db')
+        conn = sqlite3.connect('/home/techturtl3/databaseFile.db')
 
         # step 2 create the cursor
         c = conn.cursor()
@@ -168,7 +168,7 @@ class FlixStorage:
     @staticmethod
     def fetch_shows():
         # step 1 connect the database
-        conn = sqlite3.connect('databaseFile.db')
+        conn = sqlite3.connect('/home/techturtl3/databaseFile.db')
 
         # step 2 create the cursor
         c = conn.cursor()
@@ -193,7 +193,7 @@ class FlixStorage:
 
     @staticmethod
     def clear_movies():
-        conn = sqlite3.connect('databaseFile.db')
+        conn = sqlite3.connect('/home/techturtl3/databaseFile.db')
         c = conn.cursor()
 
         c = c.execute("DROP table myMovies")
@@ -203,7 +203,7 @@ class FlixStorage:
 
     @staticmethod
     def clear_shows():
-        conn = sqlite3.connect('databaseFile.db')
+        conn = sqlite3.connect('/home/techturtl3/databaseFile.db')
         c = conn.cursor()
 
         c = c.execute("DROP table shows")
