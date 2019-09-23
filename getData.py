@@ -3,6 +3,7 @@ import urllib
 import requests
 import os
 from pprint import pprint
+import json
 
 # new_json = json.dumps(data, indent=3, sort_keys=True)
 # print(new_json)
@@ -16,9 +17,9 @@ class Api:
     def retrieve(motion_picture):
         # movie_name = input('Enter a movie or show name: ')
 
-        key = os.environ['api_key']
+        my_key = os.environ.get('api_key')
 
-        main_api = 'http://www.omdbapi.com/?t='+motion_picture+'?&apikey='+key
+        main_api = 'http://www.omdbapi.com/?t=' + motion_picture + '?&apikey='+my_key
 
         url = main_api + urllib.parse.urlencode({})
 
@@ -43,4 +44,3 @@ class Api:
         #     print('The year it came out was: '+released_year)
         #     print('This is rated: '+rated)
         #     print('Critics rating info: ', rating_value)
-        #
