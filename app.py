@@ -46,7 +46,9 @@ def home():
             try:
                 all_movies = get_movies()
                 all_shows = get_shows()
-                return render_template('list.html').format(all_movies=all_movies, all_shows=all_shows)
+                random_movie = get_random_movie()
+                random_show = get_random_show()
+                return render_template('list.html').format(all_movies=all_movies, all_shows=all_shows, random_movie=random_movie, random_show=random_show)
             except:
                 return render_template('exception.html')
 
@@ -62,6 +64,10 @@ def library():
 
         if request.form['clicked'] == 'Empty movies':
             emovies = clear_mvs()
+            return render_template('home.html')
+
+        if request.form['clicked'] == 'Empty all':
+            eall = clear_both()
             return render_template('home.html')
 
 
@@ -97,8 +103,21 @@ def clear_shws():
     return FlixStorage.clear_shows()
 
 
+def clear_both():
+    return FlixStorage.clear_all()
+
+
 def get_data(flix):
     return Api.retrieve(flix)
+
+
+def get_random_movie():
+    return FlixStorage.random_movie()
+
+
+def get_random_show():
+    return FlixStorage.random_show()
+# AIzaSyBs4966iGJgjy_mNmF6fIrnOj1niOdHK1A
 
 
 if __name__ == '__main__':

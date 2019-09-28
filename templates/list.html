@@ -41,14 +41,42 @@
     </header>
 
     <main role="main" class="container">
-        <h4>The list of movies are:</h4></br>
-        {all_movies}
-        </br>
-                </br>
+        <h4>Database storage:</h4></br>
 
-        <h4>The list of shows are:</h4>
-        </br>
-        {all_shows}
+             <table class="table table-bordered">
+      <thead>
+        <tr>
+
+          <th scope="col">movies stored</th>
+             <th scope="col">shows stored</th>
+
+        </tr>
+      </thead>
+      <tbody>
+
+          <td>{all_movies}</td>
+      <td>{all_shows}</td>
+
+      </tbody>
+    </table>
+     </br>
+                </br>
+ <table class="table table-bordered">
+      <thead>
+        <tr>
+
+          <th scope="col">random movie</th>
+             <th scope="col">random show</th>
+
+        </tr>
+      </thead>
+      <tbody>
+
+          <td>{random_movie}</td>
+      <td>{random_show}</td>
+
+      </tbody>
+    </table>
   <div class="row">
 
 
@@ -58,15 +86,14 @@
 
                     <p><input type="submit" name="clicked" value="Empty movies" /></p>
                     <p><input type="submit" name="clicked" value="Empty shows" /></p>
+                    <p><input type="submit" name="clicked" value="Empty all" /></p>
             <p></p>
 
         </form>
     </div>
     <div class="col-md-4">
       <div class="content-section">
-        <h3>Our Sidebar</h3>
-        <p class='text-muted'>You can put any information here you'd like.
-          <ul class="list-group">
+
             <li class="list-group-item list-group-item-light"></li>
             <li class="list-group-item list-group-item-light"><a class="nav-item nav-link" href="{{url_for('home')}}">Back to Home</a></li>
 
