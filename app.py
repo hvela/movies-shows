@@ -117,7 +117,6 @@ def get_random_movie():
 
 def get_random_show():
     return FlixStorage.random_show()
-# AIzaSyBs4966iGJgjy_mNmF6fIrnOj1niOdHK1A
 
 
 if __name__ == '__main__':

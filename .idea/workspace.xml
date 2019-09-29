@@ -6,7 +6,9 @@
       <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data_storage.py" beforeDir="false" afterPath="$PROJECT_DIR$/data_storage.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/databaseFile.db" beforeDir="false" afterPath="$PROJECT_DIR$/databaseFile.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/home.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/requests.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/requests.html" afterDir="false" />
     </list>
     <list id="bd3c7927-d366-452a-a869-1f389ff66ad8" name="Revert &quot;adding requests page&quot;" comment="Revert &quot;adding requests page&quot;&#10;&#10;This reverts commit 18a88072">
       <change beforePath="$PROJECT_DIR$/data_storage.py" beforeDir="false" afterPath="$PROJECT_DIR$/data_storage.py" afterDir="false" />
@@ -18,14 +20,14 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.5">
+    <splitter split-orientation="horizontal" split-proportion="0.51792526">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/app.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="278">
-                  <caret line="65" column="33" lean-forward="true" selection-start-line="65" selection-start-column="33" selection-end-line="65" selection-end-column="33" />
+                <state relative-caret-position="330">
+                  <caret line="118" column="18" selection-start-line="118" selection-start-column="11" selection-end-line="118" selection-end-column="22" />
                   <folding>
                     <element signature="e#55#91#0" expanded="true" />
                   </folding>
@@ -33,11 +35,11 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="false">
+          <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/data_storage.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="541">
-                  <caret line="194" column="16" lean-forward="true" selection-start-line="194" selection-start-column="16" selection-end-line="194" selection-end-column="16" />
+                <state relative-caret-position="3179">
+                  <caret line="187" column="64" selection-start-line="187" selection-start-column="64" selection-end-line="187" selection-end-column="64" />
                   <folding>
                     <element signature="e#0#14#0" expanded="true" />
                   </folding>
@@ -45,11 +47,20 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/templates/list.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="524">
-                  <caret line="43" column="28" selection-start-line="43" selection-start-column="28" selection-end-line="43" selection-end-column="28" />
+                <state relative-caret-position="133">
+                  <caret line="86" lean-forward="true" selection-start-line="86" selection-end-line="86" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/templates/requests.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="146">
+                  <caret line="46" column="6" lean-forward="true" selection-start-line="46" selection-start-column="6" selection-end-line="54" selection-end-column="15" />
                 </state>
               </provider>
             </entry>
@@ -57,8 +68,8 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/templates/home.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="476">
-                  <caret line="28" column="87" selection-start-line="28" selection-start-column="80" selection-end-line="28" selection-end-column="92" />
+                <state relative-caret-position="1258">
+                  <caret line="74" column="26" lean-forward="true" selection-start-line="74" selection-start-column="26" selection-end-line="74" selection-end-column="26" />
                 </state>
               </provider>
             </entry>
@@ -83,11 +94,11 @@
         </leaf>
       </split-first>
       <split-second>
-        <leaf>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/templates/list.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="303">
+                <state relative-caret-position="952">
                   <caret line="56" column="31" selection-start-line="56" selection-start-column="31" selection-end-line="56" selection-end-column="31" />
                 </state>
               </provider>
@@ -144,41 +155,35 @@
         <option value="$PROJECT_DIR$/shows_movies.py" />
         <option value="$PROJECT_DIR$/../djangoTutorial/mysiteproject/polls/views.py" />
         <option value="$PROJECT_DIR$/Tests/Integration/test_integration.py" />
-        <option value="$PROJECT_DIR$/templates/requests.html" />
         <option value="$PROJECT_DIR$/getData.py" />
         <option value="$PROJECT_DIR$/templates/fetch.html" />
-        <option value="$PROJECT_DIR$/data_storage.py" />
-        <option value="$PROJECT_DIR$/app.py" />
+        <option value="$PROJECT_DIR$/templates/requests.html" />
         <option value="$PROJECT_DIR$/templates/list.html" />
+        <option value="$PROJECT_DIR$/templates/home.html" />
+        <option value="$PROJECT_DIR$/app.py" />
+        <option value="$PROJECT_DIR$/data_storage.py" />
       </list>
     </option>
   </component>
   <component name="LineStatusTrackerManager">
     <file path="$PROJECT_DIR$/data_storage.py">
       <ranges>
-        <range start1="1" end1="2" start2="1" end2="1" changelist="21ab2665-7f7d-4124-84dc-838074511df8" />
-        <range start1="4" end1="4" start2="3" end2="4" changelist="21ab2665-7f7d-4124-84dc-838074511df8" />
         <range start1="5" end1="6" start2="5" end2="5" changelist="bd3c7927-d366-452a-a869-1f389ff66ad8" />
-        <range start1="7" end1="8" start2="6" end2="6" changelist="21ab2665-7f7d-4124-84dc-838074511df8" />
-        <range start1="29" end1="36" start2="27" end2="27" changelist="21ab2665-7f7d-4124-84dc-838074511df8" />
-        <range start1="62" end1="62" start2="53" end2="54" changelist="21ab2665-7f7d-4124-84dc-838074511df8" />
-        <range start1="63" end1="64" start2="55" end2="58" changelist="21ab2665-7f7d-4124-84dc-838074511df8" />
-        <range start1="65" end1="70" start2="59" end2="60" changelist="21ab2665-7f7d-4124-84dc-838074511df8" />
-        <range start1="71" end1="74" start2="61" end2="65" changelist="21ab2665-7f7d-4124-84dc-838074511df8" />
-        <range start1="75" end1="75" start2="66" end2="68" changelist="21ab2665-7f7d-4124-84dc-838074511df8" />
-        <range start1="76" end1="105" start2="69" end2="88" changelist="21ab2665-7f7d-4124-84dc-838074511df8" />
-        <range start1="106" end1="107" start2="89" end2="90" changelist="21ab2665-7f7d-4124-84dc-838074511df8" />
-        <range start1="108" end1="111" start2="91" end2="123" changelist="21ab2665-7f7d-4124-84dc-838074511df8" />
-        <range start1="112" end1="113" start2="124" end2="124" changelist="21ab2665-7f7d-4124-84dc-838074511df8" />
-        <range start1="115" end1="118" start2="126" end2="126" changelist="21ab2665-7f7d-4124-84dc-838074511df8" />
-        <range start1="127" end1="162" start2="135" end2="135" changelist="21ab2665-7f7d-4124-84dc-838074511df8" />
-        <range start1="211" end1="211" start2="184" end2="195" changelist="21ab2665-7f7d-4124-84dc-838074511df8" />
+        <range start1="11" end1="12" start2="10" end2="11" changelist="21ab2665-7f7d-4124-84dc-838074511df8" />
+        <range start1="34" end1="35" start2="33" end2="34" changelist="21ab2665-7f7d-4124-84dc-838074511df8" />
+        <range start1="65" end1="66" start2="64" end2="65" changelist="21ab2665-7f7d-4124-84dc-838074511df8" />
+        <range start1="99" end1="100" start2="98" end2="99" changelist="21ab2665-7f7d-4124-84dc-838074511df8" />
+        <range start1="127" end1="128" start2="126" end2="127" changelist="21ab2665-7f7d-4124-84dc-838074511df8" />
+        <range start1="144" end1="145" start2="143" end2="144" changelist="21ab2665-7f7d-4124-84dc-838074511df8" />
+        <range start1="169" end1="170" start2="168" end2="169" changelist="21ab2665-7f7d-4124-84dc-838074511df8" />
+        <range start1="179" end1="180" start2="178" end2="179" changelist="21ab2665-7f7d-4124-84dc-838074511df8" />
+        <range start1="188" end1="189" start2="187" end2="188" changelist="21ab2665-7f7d-4124-84dc-838074511df8" />
       </ranges>
     </file>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-15" />
-    <option name="width" value="2383" />
+    <option name="width" value="1948" />
     <option name="height" value="2075" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -186,7 +191,25 @@
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
-    <panes />
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="movies_shows" type="b2602c69:ProjectViewProjectNode" />
+              <item name="movies_shows" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="movies_shows" type="b2602c69:ProjectViewProjectNode" />
+              <item name="movies_shows" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
@@ -386,7 +409,14 @@
       <option name="project" value="LOCAL" />
       <updated>1569200614779</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="adding random generator for movies and shows and empty both lists button">
+      <created>1569643407457</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1569643407458</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -434,12 +464,12 @@
     <frame x="-6" y="-6" width="1549" height="837" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.2298444" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.13465346" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.1299435" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.2019774" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39952904" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -492,7 +522,8 @@
     <MESSAGE value="added search button for requests page" />
     <MESSAGE value="request page now retrieves api data" />
     <MESSAGE value="adding display box for api data" />
-    <option name="LAST_COMMIT_MESSAGE" value="adding display box for api data" />
+    <MESSAGE value="adding random generator for movies and shows and empty both lists button" />
+    <option name="LAST_COMMIT_MESSAGE" value="adding random generator for movies and shows and empty both lists button" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -514,7 +545,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/app.py</url>
-          <line>122</line>
+          <line>121</line>
           <option name="timeStamp" value="4" />
         </line-breakpoint>
       </breakpoints>
@@ -626,16 +657,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/requests.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="517">
-          <caret line="69" selection-start-line="69" selection-end-line="69" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/added.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/fetch.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="213">
@@ -643,37 +664,47 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/home.html">
+    <entry file="file://$PROJECT_DIR$/templates/added.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/requests.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="28" column="87" selection-start-line="28" selection-start-column="80" selection-end-line="28" selection-end-column="92" />
+        <state relative-caret-position="146">
+          <caret line="46" column="6" lean-forward="true" selection-start-line="46" selection-start-column="6" selection-end-line="54" selection-end-column="15" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/data_storage.py">
+    <entry file="file://$PROJECT_DIR$/templates/list.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="541">
-          <caret line="194" column="16" lean-forward="true" selection-start-line="194" selection-start-column="16" selection-end-line="194" selection-end-column="16" />
-          <folding>
-            <element signature="e#0#14#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="133">
+          <caret line="86" lean-forward="true" selection-start-line="86" selection-end-line="86" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/home.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1258">
+          <caret line="74" column="26" lean-forward="true" selection-start-line="74" selection-start-column="26" selection-end-line="74" selection-end-column="26" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="278">
-          <caret line="65" column="33" lean-forward="true" selection-start-line="65" selection-start-column="33" selection-end-line="65" selection-end-column="33" />
+        <state relative-caret-position="330">
+          <caret line="118" column="18" selection-start-line="118" selection-start-column="11" selection-end-line="118" selection-end-column="22" />
           <folding>
             <element signature="e#55#91#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/list.html">
+    <entry file="file://$PROJECT_DIR$/data_storage.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="524">
-          <caret line="43" column="28" selection-start-line="43" selection-start-column="28" selection-end-line="43" selection-end-column="28" />
+        <state relative-caret-position="3179">
+          <caret line="187" column="64" selection-start-line="187" selection-start-column="64" selection-end-line="187" selection-end-column="64" />
+          <folding>
+            <element signature="e#0#14#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
