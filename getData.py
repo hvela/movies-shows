@@ -17,7 +17,7 @@ class Api:
     def retrieve(motion_picture):
         # movie_name = input('Enter a movie or show name: ')
 
-        my_key = os.environ.get('api_key')
+        my_key = os.getenv('api_key')
 
         main_api = 'http://www.omdbapi.com/?t=' + motion_picture + '?&apikey='+my_key
 
